@@ -1,0 +1,380 @@
+body {
+    margin: 0;
+    font-family: 'Audiowide', cursive;
+}
+
+body h2 {
+    text-align: center;
+}
+
+.mainbox {
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(110, 228, 228);
+}
+
+ul {
+    list-style-type: none;
+    margin: 3% 0 0 30%;
+}
+
+ul li {
+    width: 800px;
+    height: 70px;
+}
+
+ul a {
+    text-decoration: none;
+    margin-right: 5%;
+}
+
+.icon0 {
+    color: crimson;
+    padding: 0 0 3% 3%;
+}
+
+.icon0:hover {
+    transform: scale(1.2);
+}
+
+.icon1 {
+    transition: 2s;
+}
+
+.icon1:hover {
+    transform: rotate(360deg);
+}
+
+
+/* --------------------------------------------------- */
+
+.mainbox1 {
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(233, 170, 52);
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin: auto;
+    margin-top: 3%;
+}
+
+.menu a span:first-child {
+    display: inline-block;
+    padding: 10px;
+}
+
+.menu a {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+.menu a span:last-child {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+}
+
+.menu a span {
+    transition: transform 0.2s ease-out;
+    background-color: purple;
+    margin-right: 15px;
+    border-radius: 50px 50px;
+}
+
+.menu a:hover span:first-child {
+    transform: translateY(100%);
+}
+
+.menu a:hover span:last-child {
+    transform: none;
+}
+
+.menu[data-animation="to-top"] a span:last-child {
+    transform: translateY(100%);
+}
+
+.menu[data-animation="to-top"] a:hover span:first-child {
+    transform: translateY(-100%);
+}
+
+.menu[data-animation="to-right"] a span:last-child {
+    transform: translateX(-100%);
+}
+
+.menu[data-animation="to-right"] a:hover span:first-child {
+    transform: translateX(100%);
+}
+
+.menu[data-animation="to-left"] a span:last-child {
+    transform: translateX(100%);
+}
+
+.menu[data-animation="to-left"] a:hover span:first-child {
+    transform: translateX(-100%);
+}
+
+
+/* ------------------------------------------------- */
+
+.mainbox3 {
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    background-color: mediumslateblue;
+    padding-left: 30px;
+}
+
+.row {
+    float: left;
+    width: 100%;
+    margin: 0 0 0 33%;
+}
+
+.row .block {
+    float: left;
+    width: 50%;
+    height: 150px;
+}
+
+.hovicon {
+    display: inline-block;
+    font-size: 30px;
+    line-height: 50px;
+    cursor: pointer;
+    margin: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+    z-index: 1;
+    color: #fff;
+}
+
+.hovicon.small {
+    font-size: 20px;
+    line-height: 45px;
+    width: 45px;
+    height: 45px;
+    margin: 7px;
+}
+
+.hovicon.mini {
+    font-size: 15px;
+    line-height: 32px;
+    width: 30px;
+    height: 30px;
+    margin: 7px;
+}
+
+.hovicon.auto-width {
+    width: auto;
+    height: auto;
+    padding: 15px;
+}
+
+.hovicon:after {
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+    box-sizing: content-box;
+}
+
+.hovicon:before {
+    speak-as: none;
+    font-size: 48px;
+    line-height: 90px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    display: block;
+    -webkit-font-smoothing: antialiased;
+}
+
+
+/* Effect 1 */
+
+.hovicon.effect-1 {
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.2s, color 0.2s;
+}
+
+.hovicon.effect-1:after {
+    top: -7px;
+    left: -7px;
+    padding: 7px;
+    box-shadow: 0 0 0 4px #fff;
+    transition: transform 0.2s, opacity 0.2s;
+    transform: scale(.8);
+    opacity: 0;
+}
+
+
+/* Effect 1a */
+
+.hovicon.effect-1.sub-a:hover {
+    background: rgba(255, 255, 255, 1);
+    color: #41ab6b;
+}
+
+.hovicon.effect-1.sub-a:hover i {
+    color: #41ab6b;
+}
+
+.hovicon.effect-1.sub-a:hover:after {
+    transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+/* ------------------------------ */
+
+.mainbox4 {
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    background-color: rgb(59, 204, 59);
+    padding-left: 30px;
+}
+
+
+/* Effect 4 */
+
+.hovicon.effect-4 {
+    width: 47px;
+    height: 47px;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 1);
+}
+
+.hovicon.effect-4.small {
+    width: 45px;
+    height: 45px;
+}
+
+.hovicon.effect-4.mini {
+    width: 30px;
+    height: 30px;
+}
+
+.hovicon.effect-4:before {
+    line-height: 92px;
+}
+
+.hovicon.effect-4:after {
+    top: -4px;
+    left: -4px;
+    padding: 0;
+    z-index: 10;
+    border: 4px dashed #fff;
+}
+
+.hovicon.effect-4:hover {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+    color: #fff;
+}
+
+.hovicon.effect-4:hover i {
+    color: #fff;
+}
+
+
+/* Effect 4b */
+
+.hovicon.effect-4.sub-b:hover {
+    transition: box-shadow 0.2s;
+}
+
+.hovicon.effect-4.sub-b:hover:after {
+    animation: spinAround 9s linear infinite;
+}
+
+@-webkit-keyframes spinAround {
+    from {
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+
+/* ------------------------------------------ */
+
+.mainbox5 {
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    background-color: burlywood;
+    padding-left: 30px;
+}
+
+
+/* Effect 8 */
+
+.hovicon.effect-8 {
+    background: rgba(255, 255, 255, 0.329);
+    transition: transform ease-out 0.1s, background 0.2s;
+}
+
+.hovicon.effect-8 b {
+    color: brown;
+}
+
+.hovicon.effect-8:after {
+    top: 0;
+    left: 0;
+    padding: 0;
+    z-index: -1;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+.hovicon.effect-8:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: scale(0.93);
+    color: #fff;
+}
+
+.hovicon.effect-8:hover i {
+    color: #fff;
+}
+
+.hovicon.effect-8:hover:after {
+    animation: sonarEffect 1.3s ease-out 75ms;
+}
+
+@-webkit-keyframes sonarEffect {
+    0% {
+        opacity: 0.3;
+    }
+    40% {
+        opacity: 0.5;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px darkviolet, 0 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 10px 10px darkviolet, 0 0 0 10px rgba(255, 255, 255, 0.5);
+        -webkit-transform: scale(1.5);
+        opacity: 0;
+    }
+}
